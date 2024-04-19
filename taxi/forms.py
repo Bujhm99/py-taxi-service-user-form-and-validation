@@ -23,12 +23,7 @@ class DriverCreationForm(UserCreationForm):
 
 
 class DriverLicenseUpdateForm(forms.ModelForm):
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.fields["username"].widget.attrs["readonly"] = "true"
-    #
-    #   Don't get through the tests
-    #
+
     license_number = forms.CharField(
         max_length=8,
         required=True,
