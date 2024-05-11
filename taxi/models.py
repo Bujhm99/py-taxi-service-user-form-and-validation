@@ -7,7 +7,7 @@ class Manufacturer(models.Model):
     name = models.CharField(max_length=255, unique=True)
     country = models.CharField(max_length=255)
 
-    def __str__(self) -> models.CharField:
+    def __str__(self) -> str:
         return self.name
 
     class Meta:
@@ -34,7 +34,7 @@ class Car(models.Model):
     )
     drivers = models.ManyToManyField(Driver, related_name="cars")
 
-    def __str__(self) -> models.CharField:
+    def __str__(self) -> str:
         return self.model
 
     class Meta:
